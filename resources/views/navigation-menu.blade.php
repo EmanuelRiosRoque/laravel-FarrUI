@@ -1,5 +1,4 @@
-<nav x-data="{ open: false }" class="py-4 border-b border-gray-100">
-
+<nav x-data="{ open: false }" class="py-4 border-b  bg-gray-100 border-gray-100 relative z-50" data-aos="fade-down">
     <x-navbar-container>
         <div class="flex justify-between items-center w-full">
             <!-- Contenido centrado (Título) -->
@@ -16,7 +15,4 @@
             </div>
         </div>
     </x-navbar-container>
-
-
-    {{-- Agregar navbar responsive --}}
 </nav>

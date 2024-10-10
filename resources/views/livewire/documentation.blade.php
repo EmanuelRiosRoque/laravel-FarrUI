@@ -1,5 +1,5 @@
 <div class="container">
-    <div x-data="{ active: 'instalacion' }">
+    <div x-data="{ active: 'instalacion' }" >
         <div class="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
@@ -30,7 +30,7 @@
               </label>
             </div>
 
-            <div class="drawer-side">
+            <div class="drawer-side" data-aos="fade-right">
               <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
 
               <!-- Sidebar con scroll y items -->
