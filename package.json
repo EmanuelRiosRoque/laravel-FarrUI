@@ -18,6 +18,7 @@
     "dependencies": {
         "@heroicons/vue": "^2.1.5",
         "alpinejs": "^3.14.1",
-        "daisyui": "^4.12.12"
+        "daisyui": "^4.12.12",
+        "farrui": "^1.0.1"
     }
 }

@@ -29,7 +29,7 @@
     <section class="container mx-auto py-20 min-h-[100vh] flex flex-col items-center justify-center" id="presetation">
         <!-- Encabezado centrado -->
         <div class="flex justify-center" data-aos="fade-up">
-            <div class="text-center py-2 w-36 rounded-xl shadow-shadow-down">
+            <div class="text-center py-2 w-36 rounded-xl shadow-down">
                 <h1 class="text-gray-700 font-bold text-xl">{{ __('Hola !') }}</h1>
             </div>
         </div>
@@ -64,18 +64,15 @@
     {{-- Second Section --}}
     <section class="container mx-auto py-20 min-h-[100vh]" id="kwonmore">
         <div class="flex justify-center" data-aos="fade-up">
-            <div class="text-center py-2 w-36 rounded-xl shadow-shadow-down">
+            <div class="text-center py-2 w-36 rounded-xl shadow-down">
                 <h1 class="text-gray-700 font-bold text-xl">{{ __('Hello !') }}</h1>
             </div>
         </div>
 
             <div class="mt-10">
                 <div class="flex w-full flex-col lg:flex-row gap-5">
-                    <!-- Primera tarjeta con animación -->
-                    <div class="card rounded-box grid flex-grow lg:w-1/2 p-5 place-items-center px-20 relative" data-aos="fade-right">
-                        <!-- Waves como fondo -->
+                    <div class="card rounded-box grid flex-grow lg:w-1/2 p-5 place-items-center px-10 relative" data-aos="fade-right">
                         <div class="absolute inset-0 z-0 flex justify-center items-center">
-                            <!-- Centrar las waves -->
                             <div class="w-full h-full flex flex-col justify-center items-center">
                                 <x-waves />
                                 <div class="rotate-180">
@@ -84,12 +81,10 @@
                             </div>
                         </div>
 
-                        <!-- Contenido sobre los Waves -->
-                        <div class="relative z-10 flex justify-center flex-col items-center p-32 text-white bg-glass-1 border border-glass-1 shadow-glass-1 backdrop-blur-glass-1 rounded-glass-1">
-                            <p class="mt-2 text-xl">FarrUI</p>
-                            <div>
-
-                            </div>
+                        <div x-data="{ scrollY: 0 }" x-init="window.addEventListener('scroll', () => scrollY = window.scrollY)" class="relative z-10 flex justify-center flex-col items-center p-32 text-white glass-1">
+                            <span :class="scrollY > 1465 ? 'scale-125 text-black' : 'scale-100'" class="transform transition-transform duration-500">Esto es FarrUI</span>
+                            <span :class="scrollY > 1595 ? 'scale-125 text-black'  : 'scale-100'" class="transform transition-transform duration-500 delay-200">Componentes Modernos</span>
+                            <span :class="scrollY > 1789 ? 'scale-125 text-black' : 'scale-100'" class="transform transition-transform duration-500 delay-400">Con clases simples para modelar</span>
                         </div>
                     </div>
 
@@ -98,14 +93,28 @@
                     {{-- <div class="divider lg:divider-horizontal">OR</div> --}}
 
                     <!-- Segunda tarjeta con animación -->
-                    <x-section-card scroll="fade-left" title="About Project" textButton="Conocer más" href="{{ route('documentation') }}">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias aspernatur ab. Quae animi ipsum dicta quas deserunt provident accusamus quos officia, maiores quod iure, dolor error molestiae molestias illo.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias aspernatur ab. Quae animi ipsum dicta quas deserunt provident accusamus quos officia, maiores quod iure, dolor error molestiae molestias illo.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias aspernatur ab. Quae animi ipsum dicta quas deserunt provident accusamus quos officia, maiores quod iure, dolor error molestiae molestias illo.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias aspernatur ab. Quae animi ipsum dicta quas deserunt provident accusamus quos officia, maiores quod iure, dolor error molestiae molestias illo.
+                    <x-section-card w='w-40' hoverColor="bg-red-600" scroll="fade-left" title="Motivacion" textButton="Laravel" href="https://laravel.com">
+                        Mi motivación para este proyecto es mejorar los elementos UI y templates en Laravel. Aunque Laravel ha evolucionado, muchos de sus componentes UI siguen siendo simples y poco atractivos. Además, hay una falta de templates versátiles, ya que la mayoría están centrados en análisis de datos. Mi objetivo es demostrar que Laravel tiene el potencial para ofrecer interfaces modernas y proyectos de alta calidad, más allá de su enfoque en bases de datos. Un ejemplo de esto es este sitio web, desarrollado con Laravel.
                     </x-section-card>
                 </div>
             </div>
     </section>
 
+    {{-- <section class="container mx-auto py-20 min-h-[100vh]" id="kwonmore">
+        <div class="flex justify-center" data-aos="fade-up">
+            <div class="text-center py-2 w-36 rounded-xl shadow-down">
+                <h1 class="text-gray-700 font-bold text-xl">{{ __('Hello !') }}</h1>
+            </div>
+        </div>
+
+            <div class="mt-10">
+
+            </div>
+    </section> --}}
+
+    <script>
+        window.addEventListener('scroll', function() {
+            console.log(window.scrollY);
+        });
+    </script>
 </x-app-layout>

@@ -6,9 +6,9 @@
               <!-- Contenido dinámico según el elemento activo -->
               <div class="p-20">
                   <template x-if="active === 'instalacion'">
-                        <section class="bg-gray-100 shadow-shadow-up p-4 rounded-lg">
+                        <section class="bg-gray-100 shadow-up p-4 rounded-lg">
                             La forma de instalar los nuevos components es la siguiente forma:
-                            <div class=" shadow-shadow-down p-5 rounded-lg">
+                            <div class=" shadow-down p-5 rounded-lg">
                                 @composer require laravel/ui
                             </div>
                         </section>
@@ -36,17 +36,17 @@
               <!-- Sidebar con scroll y items -->
               <ul class="menu bg-base-100 text-base-content min-h-full w-80 p-4 overflow-y-auto rounded-xl">
                 <li>
-                  <a href="#" :class="{ 'shadow-shadow-down': active === 'instalacion' }" @click.prevent="active = 'instalacion'">
+                  <a href="#" :class="{ 'shadow-down': active === 'instalacion' }" @click.prevent="active = 'instalacion'">
                     👨‍💻 Instalación
                   </a>
                 </li>
                 <li>
-                  <a href="#" :class="{ 'shadow-shadow-down': active === 'item2' }" @click.prevent="active = 'item2'">
+                  <a href="#" :class="{ 'shadow-down': active === 'item2' }" @click.prevent="active = 'item2'">
                     Sidebar Item 2
                   </a>
                 </li>
                 <li>
-                  <a href="#" :class="{ 'shadow-shadow-down': active === 'item3' }" @click.prevent="active = 'item3'">
+                  <a href="#" :class="{ 'shadow-down': active === 'item3' }" @click.prevent="active = 'item3'">
                     Sidebar Item 3
                   </a>
                 </li>

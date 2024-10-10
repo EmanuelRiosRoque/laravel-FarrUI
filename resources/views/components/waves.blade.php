@@ -54,19 +54,24 @@
 </style>
 
 
+<div x-data="{ scrollY: 0 }" x-init="window.addEventListener('scroll', () => scrollY = window.scrollY)">
+    <svg class="waves transition-colors duration-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" x="49" y="0" :fill="scrollY > 1595 ? `rgba(200,200,200,0.7)` : 'rgba(0,0,0,0.7)'" class="transition-colors duration-500" />
+        <use xlink:href="#gentle-wave" x="48" y="3" :fill="scrollY > 1600 ? `rgba(220,220,220,0.5)` : 'rgba(0,0,0,0.5)'" class="transition-colors duration-500" />
+        <use xlink:href="#gentle-wave" x="48" y="5" :fill="scrollY > 1789 ? `rgba(240,240,240,0.3)` : 'rgba(0,0,0,0.3)'" class="transition-colors duration-500" />
+        <use xlink:href="#gentle-wave" x="48" y="7" :fill="scrollY > 1465 ? `rgba(255,255,255,0.2)` : '#000'" class="transition-colors duration-500" />
 
-<div>
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-            {{-- If you needs change the color, you can do that only change the rgba --}}
-            <use xlink:href="#gentle-wave" x="49" y="0" fill="rgba(0,0,0,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
+            {{-- <use xlink:href="#gentle-wave" x="49" y="0" :fill="scrollY > 1595 ? `rgba(200,0,0,0.7)` : 'rgba(0,0,0,0.7)'" class="transition-colors duration-500" />
+                <use xlink:href="#gentle-wave" x="48" y="3" :fill="scrollY > 1600 ? `rgba(220,0,0,0.5)` : 'rgba(0,0,0,0.5)'" class="transition-colors duration-500" />
+                <use xlink:href="#gentle-wave" x="48" y="5" :fill="scrollY > 1789 ? `rgba(240,0,0,0.3)` : 'rgba(0,0,0,0.3)'" class="transition-colors duration-500" />
+                <use xlink:href="#gentle-wave" x="48" y="7" :fill="scrollY > 1465 ? `rgba(255,0,0,0.2)` : '#000'" class="transition-colors duration-500" /> --}}
         </g>
-    </svg>
+</svg>
+
 </div>
+

@@ -1,17 +1,17 @@
-@props(['title', 'textButton', 'href', 'scroll', 'navigate' => false])
+@props(['title', 'textButton', 'href', 'scroll', 'navigate' => false, 'hoverColor' => 'bg-zinc-900' , 'w' => 'w-52'] )
 
-<div class="card bg-base-200 shadow-shadow-down rounded-box grid flex-grow lg:w-1/2 p-5 place-items-center px-20" data-aos="{{ $scroll }}">
+<div class="card bg-base-200 shadow-down rounded-box grid flex-grow lg:w-1/2 p-5 place-items-center px-20" data-aos="{{ $scroll }}">
     <!-- Título -->
     <h1 class="text-gray-700 font-bold text-xl">{{ $title }}</h1>
 
     <!-- Contenido dinámico -->
-    <p class="mt-2">
+    <p class="mt-2 text-center">
         {{ $slot }}
     </p>
 
     <!-- Botón como enlace -->
     <a @if($navigate) wire:navigate @endif href="{{ $href }}"
-        class="flex break-inside bg-black hover:bg-zinc-900 rounded-3xl px-8 py-4 mb-4 dark:text-white w-52 mt-2 transition-colors duration-300"
+        class="flex break-inside bg-black hover:{{ $hoverColor }} rounded-3xl px-8 py-4 mb-4 dark:text-white {{ $w }} w-5 mt-2 transition-colors duration-300"
         aria-label="{{ $textButton }}" role="button">
         <div class="flex items-center justify-between flex-1">
             <span class="text-lg font-medium text-white">{{ $textButton }}</span>
