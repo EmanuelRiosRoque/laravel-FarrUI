@@ -11,6 +11,9 @@
                             <div class=" shadow-down p-5 rounded-lg">
                                 @composer require laravel/ui
                             </div>
+
+                            <x-farrUI.farrui-navbar-1/>
+
                         </section>
                   </template>
 

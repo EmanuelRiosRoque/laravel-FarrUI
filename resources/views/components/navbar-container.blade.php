@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-mac rounded-lg container mx-auto"
+<div class="navbar bg-base-100 shadow rounded-lg container mx-auto"
 data-aos="fade-down"
 >
     {{ $slot }}

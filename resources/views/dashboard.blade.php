@@ -30,7 +30,7 @@
         <!-- Encabezado centrado -->
         <div class="flex justify-center" data-aos="fade-up">
             <div class="text-center py-2 w-36 rounded-xl shadow-down">
-                <h1 class="text-gray-700 font-bold text-xl">{{ __('Hola !') }}</h1>
+                <h1 class="text-gray-700 font-bold text-xl">Hola !</h1>
             </div>
         </div>
 
@@ -62,10 +62,10 @@
 
 
     {{-- Second Section --}}
-    <section class="container mx-auto py-20 min-h-[100vh]" id="kwonmore">
+    <section class="container mx-auto py-20 min-h-[100vh] flex flex-col items-center justify-center" id="kwonmore">
         <div class="flex justify-center" data-aos="fade-up">
-            <div class="text-center py-2 w-36 rounded-xl shadow-down">
-                <h1 class="text-gray-700 font-bold text-xl">{{ __('Hello !') }}</h1>
+            <div class="text-center py-2  w-40 rounded-xl shadow-down">
+                <h1 class="text-gray-700 font-bold text-xl">{{ __('Que es FarrUI') }}</h1>
             </div>
         </div>
 
@@ -81,7 +81,7 @@
                             </div>
                         </div>
 
-                        <div x-data="{ scrollY: 0 }" x-init="window.addEventListener('scroll', () => scrollY = window.scrollY)" class="relative z-10 flex justify-center flex-col items-center p-32 text-white glass-1">
+                        <div x-data="{ scrollY: 0 }" x-init="window.addEventListener('scroll', () => scrollY = window.scrollY)" class="relative z-10 flex justify-center flex-col items-center p-24 text-white glass-1">
                             <span :class="scrollY > 1465 ? 'scale-125 text-black' : 'scale-100'" class="transform transition-transform duration-500">Esto es FarrUI</span>
                             <span :class="scrollY > 1595 ? 'scale-125 text-black'  : 'scale-100'" class="transform transition-transform duration-500 delay-200">Componentes Modernos</span>
                             <span :class="scrollY > 1789 ? 'scale-125 text-black' : 'scale-100'" class="transform transition-transform duration-500 delay-400">Con clases simples para modelar</span>
@@ -93,7 +93,7 @@
                     {{-- <div class="divider lg:divider-horizontal">OR</div> --}}
 
                     <!-- Segunda tarjeta con animación -->
-                    <x-section-card w='w-40' hoverColor="bg-red-600" scroll="fade-left" title="Motivacion" textButton="Laravel" href="https://laravel.com">
+                    <x-section-card w="w-40" scroll="fade-left" title="Motivacion" textButton="Laravel" href="https://laravel.com">
                         Mi motivación para este proyecto es mejorar los elementos UI y templates en Laravel. Aunque Laravel ha evolucionado, muchos de sus componentes UI siguen siendo simples y poco atractivos. Además, hay una falta de templates versátiles, ya que la mayoría están centrados en análisis de datos. Mi objetivo es demostrar que Laravel tiene el potencial para ofrecer interfaces modernas y proyectos de alta calidad, más allá de su enfoque en bases de datos. Un ejemplo de esto es este sitio web, desarrollado con Laravel.
                     </x-section-card>
                 </div>
